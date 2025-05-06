@@ -76,6 +76,8 @@ if(gazebo_FOUND)
 		boat
 		cloudship
 		glider
+		dropla_450_drone
+		dropla_450_drone_stereo_camera
 		iris
 		iris_dual_gps
 		iris_foggy_lidar
@@ -116,6 +118,7 @@ if(gazebo_FOUND)
 		warehouse
 		windy
 		yosemite
+		dropla_testing
 	)
 
 	# find corresponding airframes

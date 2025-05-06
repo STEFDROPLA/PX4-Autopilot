@@ -19,8 +19,10 @@ function spawn_model() {
 	Y=$4
 	X=${X:=0.0}
 	Y=${Y:=$((3*${N}))}
+	TOPIC_SUFFIX="_drone_${N}"
 
-	SUPPORTED_MODELS=("iris" "plane" "standard_vtol" "rover" "r1_rover" "typhoon_h480")
+
+	SUPPORTED_MODELS=("iris" "iris_depth_camera" "plane" "standard_vtol" "rover" "r1_rover" "typhoon_h480" "dropla_450_drone" "dropla_450_drone_stereo_camera" "dropla_stereo_camera")
 	if [[ " ${SUPPORTED_MODELS[*]} " != *"$MODEL"* ]];
 	then
 		echo "ERROR: Currently only vehicle model $MODEL is not supported!"
@@ -47,6 +49,8 @@ function spawn_model() {
 	set -- ${@} --video_uri $((5600+${N}))
 	set -- ${@} --mavlink_cam_udp_port $((14530+${N}))
 	set -- ${@} --output-file /tmp/${MODEL}_${N}.sdf
+	set -- ${@} --topic_suffix ${TOPIC_SUFFIX}
+	set -- ${@} --instance drone_${N}
 
 	python3 ${@}
 
