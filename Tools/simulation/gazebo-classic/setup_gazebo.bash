@@ -16,9 +16,9 @@ SRC_DIR=$1
 BUILD_DIR=$2
 
 # setup Gazebo env and update package path
-export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:${BUILD_DIR}/build_gazebo-classic
+export GAZEBO_PLUGIN_PATH=${BUILD_DIR}/build_gazebo-classic:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:${SRC_DIR}/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${BUILD_DIR}/build_gazebo-classic
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${BUILD_DIR}/build_gazebo-classic:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
 
 echo -e "GAZEBO_PLUGIN_PATH $GAZEBO_PLUGIN_PATH"
 echo -e "GAZEBO_MODEL_PATH $GAZEBO_MODEL_PATH"

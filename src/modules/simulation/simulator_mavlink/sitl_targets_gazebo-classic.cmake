@@ -103,6 +103,8 @@ if(gazebo_FOUND)
 		typhoon_h480
 		uuv_bluerov2_heavy
 		uuv_hippocampus
+		dropla_450_drone
+		dropla_450_drone_stereo_camera
 	)
 
 	set(worlds
@@ -116,6 +118,7 @@ if(gazebo_FOUND)
 		warehouse
 		windy
 		yosemite
+		dropla_testing
 	)
 
 	# find corresponding airframes
