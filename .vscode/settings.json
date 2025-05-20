@@ -129,4 +129,16 @@
         "yaml.schemas": {
                 "${workspaceFolder}/validation/module_schema.yaml": "${workspaceFolder}/src/modules/*/module.yaml"
         },
+        "python.autoComplete.extraPaths": [
+                "/home/stefano_99/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages",
+                "/home/stefano_99/ros2_ws/install/drone_control/lib/python3.10/site-packages",
+                "/opt/ros/humble/lib/python3.10/site-packages",
+                "/opt/ros/humble/local/lib/python3.10/dist-packages"
+        ],
+        "python.analysis.extraPaths": [
+                "/home/stefano_99/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages",
+                "/home/stefano_99/ros2_ws/install/drone_control/lib/python3.10/site-packages",
+                "/opt/ros/humble/lib/python3.10/site-packages",
+                "/opt/ros/humble/local/lib/python3.10/dist-packages"
+        ],
 }
