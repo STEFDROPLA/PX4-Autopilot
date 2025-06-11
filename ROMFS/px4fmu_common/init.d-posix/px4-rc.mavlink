@@ -39,3 +39,5 @@ if [ "$PX4_SIMULATOR" = "sihsim" ]; then
 	mavlink stream -r 200 -s HIL_ACTUATOR_CONTROLS -u  $udp_sihsim_port_local
 	mavlink stream -r 25 -s HIL_STATE_QUATERNION -u  $udp_sihsim_port_local
 fi
+
+mavlink start -u 14600 -o 14550 -t 127.0.0.1 -m onboard -x -f
